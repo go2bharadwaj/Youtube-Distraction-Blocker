@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Study Blocker",
+  "version": "1.0",
+  "description": "Blocks unrelated YouTube videos while studying.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://ml-blocker-api-1077647477.us-central1.run.app/*",
+    "https://www.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
