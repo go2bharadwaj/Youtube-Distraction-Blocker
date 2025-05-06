@@ -1,9 +1,5 @@
 console.log("✅ content.js injected");
 
-// === SETTINGS ===
-const YOUTUBE_API_KEY = "AIzaSyCwt9kU-Kj55IHqFQo8CCX-imjBpfLB2RI"; // 🔁 Replace with yours
-const RELEVANCE_API_URL = "https://ml-blocker-api-1077647477.us-central1.run.app/check-relevance";
-
 
 // === 1. Get YouTube video ID ===
 function getVideoId() {
